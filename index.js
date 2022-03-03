@@ -14,3 +14,13 @@ const outputDirectory = path.resolve(__dirname, "output");
 
 // Joining folder and file path
 const outputPath = path.join(outputDirectory, "team.html");
+
+//Team members in an array
+const teamMembers = [];
+
+// Function to initialize App
+function init() {
+  console.log("Application is Running....");
+}
+
+init();
