@@ -8,3 +8,6 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
 const renderTeamHtml = require("./src/generateHTML");
+
+// Creating path for output folder
+const OutputDirectory = path.resolve(_dirname, "Output");
