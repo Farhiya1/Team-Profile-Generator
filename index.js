@@ -10,4 +10,7 @@ const path = require("path");
 const renderTeamHtml = require("./src/generateHTML");
 
 // Creating path for output folder
-const OutputDirectory = path.resolve(_dirname, "Output");
+const outputDirectory = path.resolve(_dirname, "Output");
+
+// Joining folder and file path
+const outputPath = path.join(outputDirectory, 'team.html')
