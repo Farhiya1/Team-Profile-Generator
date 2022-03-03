@@ -23,4 +23,6 @@ function init() {
   console.log("Application is Running....");
 }
 
+
+// Calling function to initialize App
 init();
