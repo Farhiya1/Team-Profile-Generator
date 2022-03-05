@@ -103,5 +103,43 @@ function init() {
     console.log("Adding Engineer....");
   }
 
+  function addIntern() {
+    inquirer
+      .prompt([
+        {
+          type: "input",
+          name: "internName",
+          message: "What is the name of this intern?",
+        },
+        {
+          type: "input",
+          name: "internId",
+          message: "What is the ID of this intern?",
+        },
+        {
+          type: "input",
+          name: "internEmail",
+          message: "What is the interns email address?",
+        },
+        {
+          type: "input",
+          name: "internSchool",
+          message: "What is the name of the school?",
+        },
+      ])
+      .then((answers) => {
+        const intern = new Intern(
+          answers.internName,
+          answers.internId,
+          answers.internEmail,
+          answers.internSchool
+        );
+        intern.title = "intern";
+        console.log(intern);
+        teamMembers.push(intern);
+        chooseNextTeamMember();
+      });
+    console.log("Adding Intern.....");
+  }
 // Calling function to initialize App
 init();
