@@ -141,5 +141,31 @@ function init() {
       });
     console.log("Adding Intern.....");
   }
+  // Function for choosing next Team Member - called after each employee has been added, option to create HTML
+  function chooseNextTeamMember() {
+    console.log("Asking Manager what he/she wants to do next...");
+
+    inquirer
+      .prompt([
+        {
+          type: "list",
+          name: "chosenEmployeeToAdd",
+          message: "Choose chich team member to add next... ",
+          choices: ["Add Engineer", "Add Intern", "Finnish creating team"],
+        },
+      ])
+      .then((choice) => {
+        console.log(choice.chosenEmployeeToAdd);
+
+        if (choice.chosenEmployeeToAdd === "Add Engineer") {
+          addEngineer();
+        } else if (choice.chosenEmployeeToAdd === "Add Intern") {
+          addIntern();
+        } else {
+          createTeamHTML();
+        }
+      });
+  }
+
 // Calling function to initialize App
 init();
