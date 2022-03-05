@@ -1,11 +1,18 @@
 .card-header {
-  background-color: lightblue;
+  background-color: #5daeff;
 }
 
 .jumbotron {
+  background-color: white;
   text-align: center;
-  background-color: transparent;
-  color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
+}
+
+.col-4 {
+  display: inline-block;
+  width: 350px;
+  margin-left: 2rem;
+}
+
+.h1 {
+  font-family: monospace;
 }
