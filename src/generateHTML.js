@@ -1,15 +1,14 @@
-// Function responsible for taking out array of team members and creating html for each
+// /Function responsible for taking our array of team members and creating html for each
 const generateTeamMembersHtml = (teamMembers) => {};
-
 // Function which creates cards using HTML, for teamMembers
 const formatData = (data) => {
-  // Loops over employees and returns informmation on the card for each team member
+  // Loops over the employees and returns information to the card
   return data.map((employee) => {
-    let x = "Boss";
+    let x = "Employer";
     let y = employee.officeNumber;
     if (employee.title == "intern") {
       console.log("employee", employee);
-      x = "school name";
+      x = "School name";
       y = employee.school;
     }
     if (employee.title == "engineer") {
@@ -18,7 +17,7 @@ const formatData = (data) => {
     }
     return ` <div class="col-4 mt-4">
             <div class="card h-100">
-                <div class="card-header">
+                <div class="card-header text-white">
                     <h3>${employee.name}</h3>
                     <h4>${employee.title}</h4><i class="material-icons">content_paste</i>
                 </div>
@@ -31,38 +30,52 @@ const formatData = (data) => {
         </div> `;
   });
 };
-
 // Function for creating basic HTML and exporting teamMembers
 module.exports = (teamMembers) => {
   return `
-    <!DOCTYPE html>
+  <div class="row">
+  <div class="col-4 mt-4">
+  <div class="card h-100">
+      <div class="card-header">
+          <h3>${employee.name}</h3>
+          <h4>${employee.title}</h4><i class="material-icons">content_paste</i>
+      </div>
+      <div class="card-body">
+          <p class="id">ID: ${employee.id}</p>
+          <p class="email">Email: <a href="mailto:${employee.email}">${employee.email}</a></p>
+          <p class="office">${x}: ${y}</p>
+      </div>
+  </div>
+</div>
+</div> `;
+};
+// Function for creating basic HTML and exporting teamMembers
+module.exports = (teamMembers) => {
+  return `
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Profile</title>
-    link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="Output/style.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css?family=Public+Sans:300i,300,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    ${formatData(teamMembers)}
+<nav class="navbar bg-dark" id="navbar">
+              <span class="navbar-brand mb-0 h1 w-100 text-align text-white" id="navbar-text">Zolo Tech</span>
+          </nav>
+          <div class="jumbotron">
+      <h1 class="display-3">Team Profile</h1>
+      <p class="lead">Our tangible-tech team is making long-term bets on outstanding innovators challenging the status quo</p>
+   </div>
+      </header>
+${formatData(teamMembers)}
 </body>
 </html>
-    `;
+`;
 };
