@@ -1,4 +1,4 @@
-// Employee class - all epployees are extension of this clas.
+// Employee class - all epployees are extension of this class.
 class Employee {
   constructor(name, id, email) {
     this.name = name;
