@@ -58,7 +58,7 @@ To access Application deployed at live URL
 
 To access Application Demo via Link.
 
-3.
+3. https://drive.google.com/file/d/1YPz0fwiqMIzueAPovJQaP_j3-Qeok_1i/view?usp=sharing
 
 # Screenshot of deployed application)
 
@@ -66,9 +66,11 @@ To access Application Demo via Link.
 
 ![Screenshot of completed application](./Images/Screenshot1-GeneratedHTML.png)
 
-2. Screenshot of terminal with Prompts
+2. Screenshots of terminal with Prompts
 
 ![Screenshot of completed application](./Images/Screenshot2-PromptsInTerminal.png)
+
+![Screenshot of completed application](./Images/Screenshot3-TerminalPrompts.png)
 
 # References
 
