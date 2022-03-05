@@ -62,6 +62,46 @@ function init() {
     console.log("Adding Manager....");
 }
 
+  function addEngineer() {
+    inquirer
+      .prompt([
+        {
+          type: "input",
+          name: "engineerName",
+          message: "What is the name of this engineer?",
+        },
+        {
+          type: "input",
+          name: "engineerId",
+          message: "What is the ID of this engineer?",
+        },
+        {
+          type: "input",
+          name: "engineerEmail",
+          message: "What is the engineers email address?",
+        },
+        {
+          type: "input",
+          name: "engineerGithub",
+          message: "What is the Github address of this engineer?",
+        },
+      ])
+      .then((answers) => {
+        const engineer = new Engineer(
+          answers.engineerName,
+          answers.engineerId,
+          answers.engineerEmail,
+          answers.engineerGithub
+        );
+        console.log(engineer);
+        engineer.title = "engineer";
+
+        teamMembers.push(engineer);
+        chooseNextTeamMember();
+      });
+
+    console.log("Adding Engineer....");
+  }
 
 // Calling function to initialize App
 init();
