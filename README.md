@@ -10,6 +10,8 @@ To create a command-line application that dynamically generates a html file from
 
 1. To generate a html file to display different team members information of a software enigereeing company through a series of prompts that is to be answered in the terminal.
 
+2. Once a team member has been created, the user is given a great overview of each team member, which is displayed in the console. This allows the user to check for any input data problems that they may have missed. This is an optional finishing touch that I felt would be useful.
+
 # What I intend to add in the near future?
 
 1. To continue to build on it with the skills I continue to gain. Altering structure for different idustries. Have better styling. Get the link for the github to work. Generate html using companies branding colours and logo. Perhaps work with a database to get the companies employees information and dynamically display that.
