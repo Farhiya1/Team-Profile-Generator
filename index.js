@@ -13,7 +13,7 @@ const renderTeamHtml = require("./src/generateHTML");
 const OUT_DIRECTORY = path.resolve(__dirname, "output");
 
 // Joining folder and file path
-const outputPath = path.join(outputDirectory, "team.html");
+const outputPath = path.join(OUT_DIRECTORY, "team.html");
 
 //Team members in an array
 const teamMembers = [];
