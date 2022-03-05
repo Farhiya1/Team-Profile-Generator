@@ -21,6 +21,45 @@ const teamMembers = [];
 // Function to initialize App
 function init() {
   console.log("Application is Running....");
+  // Using inquirer prompt to ask questions for each team member
+  function addManager() {
+    inquirer
+      .prompt([
+        {
+          type: "input",
+          name: "nameOfManager",
+          message: "What is the name of the manager in this team?",
+        },
+        {
+          type: "input",
+          name: "managerID",
+          message: "What is the managers ID?",
+        },
+        {
+          type: "input",
+          name: "managerEmail",
+          message: "What is the email of this manager?",
+        },
+        {
+          type: "input",
+          name: "managerOfficeNumber",
+          message: "What is the office number for the manager in this team?",
+        },
+      ])
+      // Then returns answers
+      .then((answers) => {
+        const manager = new Manager(
+          answers.nameOfManager,
+          answers.managerID,
+          answers.managerEmail,
+          answers.managerOfficeNumber
+        );
+        manager.title = "manager";
+        // console.log(Manager);
+        teamMembers.push(manager);
+        chooseNextTeamMember();
+      });
+    console.log("Adding Manager....");
 }
 
 
