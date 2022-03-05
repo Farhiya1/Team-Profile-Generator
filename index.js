@@ -167,5 +167,16 @@ function init() {
       });
   }
 
+  // Function to create HTML
+  function createTeamHTML() {
+    console.log("Creating HTML.......", teamMembers);
+
+    fs.writeFileSync(outputPath, renderTeamHtml(teamMembers));
+  }
+
+  //   Function to call addManager
+  addManager();
+}
+
 // Calling function to initialize App
 init();
